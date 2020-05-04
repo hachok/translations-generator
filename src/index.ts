@@ -1,4 +1,3 @@
-#!/usr/bin/env node
 import fs from 'fs';
 import chalk from 'chalk';
 import readlineSync from 'readline-sync';
