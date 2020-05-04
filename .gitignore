@@ -1,0 +1,10 @@
+.idea
+npm-debug.log
+node_modules
+index.min.js
+# Project exclude paths
+/src/index.d.ts
+/src/messages.d.ts
+/src/types.d.ts
+/src/utils.d.ts
+/src/writeTranslations.d.ts
