@@ -1,19 +1,24 @@
 <div align=center>
 <h1 style="border:0">Translations Generator</h1>
-Generate translations for your project using cli. Support js and json extensions.
+🌟 Generate translations for your project using cli. Support js and json extensions. 🌟
 </div>
 
 ## Installation
 
 1. Install package using npm or yarn.
+
    ```shell
    npm install translations-generator --save-dev
    ```
+
    or
+
    ```shell
    yarn add translations-generator -D
    ```
+
 2. Add `translation.config.json` file to root of your directory.
+
    ```
        {
            ext: "js", // "js" or "json" (extention of translations),

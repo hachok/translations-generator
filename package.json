@@ -20,6 +20,7 @@
     "clean": "shx rm -rf index.js",
     "build": "npm run clean && webpack"
   },
+  "repository": "git@github.com:hachok/translations-generator.git",
   "keywords": [
     "translations",
     "generate",
