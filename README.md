@@ -17,7 +17,7 @@
    yarn add translations-generator -D
    ```
 
-2. Add `translation.config.json` file to root of your directory.
+2. Add `translations.config.json` file to root of your directory.
 
    ```
        {
@@ -45,6 +45,8 @@ translations-generator
     │   ├── translation_en.js
     │   ├── translation_de.js
     │   ├── translation_nl.js
+    │   │...
+    ├── translations.config.json
     │...
 
 ```
