@@ -42,10 +42,14 @@ translations-generator
 
     .
     ├── src
-    │   ├── translation_en.js
-    │   ├── translation_de.js
-    │   ├── translation_nl.js
-    │   │...
+    │   ├──translations
+    │       ├── translation_en.js
+    │       ├── translation_de.js
+    │       ├── translation_nl.js
+    │       │...
+    │   ├──components
+    │   ├──....
+    ├── README.md
     ├── translations.config.json
     │...
 
