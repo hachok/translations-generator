@@ -4,7 +4,7 @@ First of all, thank you for being awesome!
 
 ## How can I contribute?
 
-- Give feedback [creating an issue](https://github.com/rmariuzzo/spotlight-never-index/issues/new).
+- Give feedback [creating an issue](https://github.com/hachok/translations-generator/issues/new).
 - Help adding tests.
 - If you like it, start it ⭐️.
 
