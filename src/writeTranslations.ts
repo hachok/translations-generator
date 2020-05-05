@@ -1,7 +1,7 @@
 import fs from 'fs';
 import chalk from 'chalk';
 
-import { checkTranslations, generateFileBasedOnJson, getFilename, parseFile } from 'src/utils';
+import { generateFileBasedOnJson, parseFile } from 'src/utils';
 import { isOverwrites } from 'src/index';
 
 import { Extensions, Config } from 'src/types';
@@ -15,17 +15,29 @@ export const writeTranslations = (
   labelInput: string,
   textInput: string,
 ): void => {
-  for (let i = 0; i < translationsList.length; i++) {
+  let allTranslations = false;
+
+  if (!translationsInput.length) {
+    allTranslations = true;
+  }
+
+  const arrTranslations = allTranslations ? translationsList : translationsInput;
+
+  for (let i = 0; i < arrTranslations.length; i++) {
     // get the contents of each file on iteration.
-    const filenameWithExt: string = translationsList[i];
-    const filename: string = getFilename(filenameWithExt);
+    const filename: string = arrTranslations[i];
+    const ext: string = allTranslations ? '' : '.' + config.ext;
+    const filenameWithExt: string = filename + ext;
     const path = `${config.path}/${filenameWithExt}`;
 
-    if (!translationsInput.length || checkTranslations(translationsInput, filename, config)) {
+    if (allTranslations || translationsList.includes(filenameWithExt)) {
       if (config.ext === Extensions.js) {
+        let json: object;
         const file: Buffer = fs.readFileSync(path);
 
-        const json: object = parseFile(file);
+        try {
+          json = parseFile(file);
+        } catch (e) {}
 
         if (isOverwrites(json, filename)) {
           json[labelInput] = textInput;
@@ -47,6 +59,8 @@ export const writeTranslations = (
       }
 
       console.log(chalk.green(messages.success.translations(labelInput, filename)));
+    } else {
+      console.log(chalk.red(messages.errors.noTranslation(filenameWithExt)));
     }
   }
 };

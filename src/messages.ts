@@ -1,17 +1,19 @@
 export default {
   errors: {
-    config:
-      'Error: No config file provided. Please, make sure that translations.config.json is in root directory',
-    translations: 'Error: No translations found in such directory',
-    label: 'Error: The label field is required',
+    translations: 'Error: No translations found in such directory.',
+    translationsList: 'Error: the directory you provided doesnt exist. Check a config file.',
+    label: 'Error: The label field is required.',
+    noTranslation: (translation) => `Error: file ${translation} wasn't found.`,
   },
   questions: {
-    translations: 'Enter translations you want to use: (leave it empty if for all of them) ',
+    translations: 'Enter translations you want to use: (empty is all)\n',
     label: 'Enter a label:\n',
     text: 'Enter a text:\n',
     newLabel: 'Enter a new label:\n',
   },
   warnings: {
+    config:
+      'Warning: No config file provided. Please, make sure that translations.config.json is in root directory.',
     overwrites: (labelInput, filename): string =>
       `Warning: ${labelInput} already exists for ${filename}. Do you want to overwrite it?(y/n)\n`,
   },
