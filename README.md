@@ -23,9 +23,9 @@
        {
            ext: "js", // "js" or "json" (extention of translations),
            path: "src/translations", // path to folder with translations
-           pattern: "translatations_", // specify pattern to use "en" instead of "translatations_en"
+           pattern: "translatations_", // (optional) specify pattern to use "en" instead of "translatations_en"
            alias: {
-               "en": "translatations_en", // you can use "en" to specify translation
+               "en": "translatations_en", // (optional) you can use "en" to specify translation
            }
        }
    ```
@@ -36,6 +36,44 @@ Run command and answer questions!
 
 ```shell
 translations-generator
+```
+
+## Example
+
+    .
+    ├── src
+    │   ├── translation_en.js
+    │   ├── translation_de.js
+    │   ├── translation_nl.js
+    │...
+
+```
+   // translation_en.js
+
+    export default {
+        "title": "Title",
+    };
+```
+
+Run `translations-generator`
+
+You'll see
+
+`Enter translations you want to use: (empty is all)`
+
+`Enter a label: description`
+
+`Enter a text: Description`
+
+Output
+
+```
+   // translation_en.js
+
+    export default {
+        "title": "Title",
+        "description": "Description",
+    };
 ```
 
 Generated files are ready! 🎉
