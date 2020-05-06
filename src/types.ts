@@ -8,4 +8,5 @@ export interface Config {
 export enum Extensions {
   js = 'js',
   json = 'json',
+  ts = 'ts',
 }

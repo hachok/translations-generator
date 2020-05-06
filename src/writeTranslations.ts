@@ -4,7 +4,7 @@ import chalk from 'chalk';
 import { generateFileBasedOnJson, parseFile } from 'src/utils';
 import { isOverwrites } from 'src/index';
 
-import { Extensions, Config } from 'src/types';
+import { Config, Extensions } from 'src/types';
 
 import messages from 'src/messages';
 
@@ -31,7 +31,7 @@ export const writeTranslations = (
     const path = `${config.path}/${filenameWithExt}`;
 
     if (allTranslations || translationsList.includes(filenameWithExt)) {
-      if (config.ext === Extensions.js) {
+      if (config.ext === Extensions.js || config.ext === Extensions.ts) {
         let json: object;
         const file: Buffer = fs.readFileSync(path);
 
