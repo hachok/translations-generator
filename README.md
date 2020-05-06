@@ -1,6 +1,6 @@
 <div align=center>
 <h1 style="border:0">Translations Generator</h1>
-🌟 Generate translations for your project using cli. Support js and json extensions. 🌟
+🌟 Generate translations for your project using cli. Support ts, js and json extensions. 🌟
 </div>
 
 ## Installation
@@ -21,7 +21,7 @@
 
    ```
        {
-           ext: "js", // "js" or "json" (extention of translations),
+           ext: "js", // "ts", "js" or "json" (extention of translations),
            path: "src/translations", // path to folder with translations
            pattern: "translatations_", // (optional) specify pattern to use "en" instead of "translatations_en"
            alias: {
