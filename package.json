@@ -1,6 +1,6 @@
 {
   "name": "translations-generator",
-  "version": "1.3.2",
+  "version": "1.3.3",
   "description": "translations-generator generates translations with label and text for json and js files.",
   "bin": {
     "translations-generator": "index.js"
@@ -22,13 +22,16 @@
   },
   "repository": "git@github.com:hachok/translations-generator.git",
   "keywords": [
+    "frontend",
+    "backend",
     "translations",
     "generate",
     "generator",
     "create",
     "translation",
     "label",
-    "text"
+    "text",
+    "add"
   ],
   "author": "hachok",
   "license": "MIT",

@@ -1,6 +1,6 @@
 <div align=center>
 <h1 style="border:0">Translations Generator</h1>
-🌟 Generate translations for your project using cli. Support ts, js and json extensions. 🌟
+🌟 Generate translations in files for your project using cli. Support ts, js and json extensions. 🌟
 </div>
 <p>
 <div align=center>
