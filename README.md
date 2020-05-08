@@ -2,9 +2,9 @@
 <h1 style="border:0">Translations Generator</h1>
 🌟 Generate translations for your project using cli. Support ts, js and json extensions. 🌟
 </div>
-
-<img src="images/preview.png" width="200px" height="100" />
-
+<p>
+<div align=center>
+<img src="images/preview.png" width="500px" height="150px" /></div>
 ## Installation
 
 1. Install package using npm or yarn.
