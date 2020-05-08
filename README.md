@@ -3,6 +3,8 @@
 🌟 Generate translations for your project using cli. Support ts, js and json extensions. 🌟
 </div>
 
+<img src="images/preview.png" width="200px" height="100" />
+
 ## Installation
 
 1. Install package using npm or yarn.
