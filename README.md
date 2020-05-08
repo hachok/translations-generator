@@ -5,6 +5,7 @@
 <p>
 <div align=center>
 <img src="images/preview.png" width="500px" height="150px" /></div>
+
 ## Installation
 
 1. Install package using npm or yarn.
