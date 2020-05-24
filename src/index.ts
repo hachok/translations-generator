@@ -10,15 +10,25 @@ import { Extensions, Config } from 'src/types';
 import messages from 'src/messages';
 
 let configFile: string;
+let isRemoveTranslation = false;
 let labelInput: string;
 let translationsInput: string[];
 let translationsList: string[];
+let translationsAnswer: string;
+let textInput: string;
 
 // default values
 let config: Config = {
   ext: Extensions.js,
   path: 'translations',
 };
+
+// grab provided arguments
+const [, , ...args] = process.argv;
+
+if (args.includes('--remove-label')) {
+  isRemoveTranslation = true;
+}
 
 // manual config
 try {
@@ -45,7 +55,11 @@ if (!translationsList.length) {
   process.exit(1);
 }
 
-const translationsAnswer = readlineSync.question(messages.questions.translations, emptyFn);
+if (isRemoveTranslation) {
+  translationsAnswer = readlineSync.question(messages.questions.translations, emptyFn);
+} else {
+  translationsAnswer = readlineSync.question(messages.questions.removeTranslations, emptyFn);
+}
 
 // remove white space and split by comma to array
 translationsInput = translationsAnswer ? translationsAnswer.replace(/\s/g, '').split(',') : [];
@@ -68,7 +82,9 @@ if (!labelInput) {
   process.exit(1);
 }
 
-const textInput = readlineSync.question(messages.questions.text, emptyFn);
+if (!isRemoveTranslation) {
+  textInput = readlineSync.question(messages.questions.text, emptyFn);
+}
 
 // check if label already exists
 export const isOverwrites = (json: object, filename: string): boolean => {
@@ -88,4 +104,11 @@ export const isOverwrites = (json: object, filename: string): boolean => {
   }
 };
 
-writeTranslations(translationsList, translationsInput, config, labelInput, textInput);
+writeTranslations(
+  translationsList,
+  translationsInput,
+  config,
+  labelInput,
+  textInput,
+  isRemoveTranslation,
+);

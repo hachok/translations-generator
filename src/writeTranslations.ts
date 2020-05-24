@@ -14,6 +14,7 @@ export const writeTranslations = (
   config: Config,
   labelInput: string,
   textInput: string,
+  isRemoveTranslation: boolean,
 ): void => {
   let allTranslations = false;
 
@@ -39,7 +40,9 @@ export const writeTranslations = (
           json = parseFile(file);
         } catch (e) {}
 
-        if (isOverwrites(json, filename)) {
+        if (isRemoveTranslation) {
+          delete json[labelInput];
+        } else if (isOverwrites(json, filename)) {
           json[labelInput] = textInput;
         }
 
@@ -51,7 +54,9 @@ export const writeTranslations = (
 
         const json: object = JSON.parse(file);
 
-        if (isOverwrites(json, filename)) {
+        if (isRemoveTranslation) {
+          delete json[labelInput];
+        } else if (isOverwrites(json, filename)) {
           json[labelInput] = textInput;
         }
 

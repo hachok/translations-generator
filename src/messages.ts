@@ -7,6 +7,7 @@ export default {
   },
   questions: {
     translations: 'Enter translations you want to use: (empty is all)\n',
+    removeTranslations: 'Enter translations you want to remove label from: (empty is all)\n',
     label: 'Enter a label:\n',
     text: 'Enter a text:\n',
     newLabel: 'Enter a new label:\n',
