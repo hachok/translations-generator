@@ -63,7 +63,11 @@ export const writeTranslations = (
         fs.writeFileSync(path, JSON.stringify(json, null, 2));
       }
 
-      console.log(chalk.green(messages.success.translations(labelInput, filename)));
+      if (isRemoveTranslation) {
+        console.log(chalk.green(messages.success.translationsRemove(labelInput, filename)));
+      } else {
+        console.log(chalk.green(messages.success.translations(labelInput, filename)));
+      }
     } else {
       console.log(chalk.red(messages.errors.noTranslation(filenameWithExt)));
     }

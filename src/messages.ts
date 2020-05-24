@@ -21,5 +21,7 @@ export default {
   success: {
     translations: (labelInput, filename): string =>
       `The translation ${labelInput} was generated to ${filename} successfully!`,
+    translationsRemove: (labelInput, filename): string =>
+      `The translation ${labelInput} was removed from ${filename} successfully!`,
   },
 };
