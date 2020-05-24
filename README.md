@@ -35,10 +35,16 @@
 
 ## Usage
 
-Run command and answer questions!
+Run command for adding translation to files
 
 ```shell
 translations-generator
+```
+
+Run command for removing translation from files
+
+```shell
+translations-generator --remove-label
 ```
 
 ## Example
