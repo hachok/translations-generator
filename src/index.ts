@@ -56,9 +56,9 @@ if (!translationsList.length) {
 }
 
 if (isRemoveTranslation) {
-  translationsAnswer = readlineSync.question(messages.questions.translations, emptyFn);
-} else {
   translationsAnswer = readlineSync.question(messages.questions.removeTranslations, emptyFn);
+} else {
+  translationsAnswer = readlineSync.question(messages.questions.translations, emptyFn);
 }
 
 // remove white space and split by comma to array

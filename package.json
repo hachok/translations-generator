@@ -1,6 +1,6 @@
 {
   "name": "translations-generator",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "translations-generator generates translations with label and text for json and js files.",
   "bin": {
     "translations-generator": "index.js"
