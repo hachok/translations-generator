@@ -16,6 +16,7 @@ let translationsInput: string[];
 let translationsList: string[];
 let translationsAnswer: string;
 let textInput: string;
+let excelPath: string;
 
 // default values
 let config: Config = {
@@ -29,6 +30,12 @@ const [, , ...args] = process.argv;
 if (args.includes('--remove-label')) {
   isRemoveTranslation = true;
 }
+
+if (args.includes('--generate')) {
+  excelPath = args[1];
+}
+
+console.log('args', args);
 
 // manual config
 try {

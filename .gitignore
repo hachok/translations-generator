@@ -2,6 +2,7 @@
 npm-debug.log
 node_modules
 index.min.js
+index.js
 # Project exclude paths
 /src/index.d.ts
 /src/messages.d.ts
