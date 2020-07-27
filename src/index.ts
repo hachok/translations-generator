@@ -35,8 +35,6 @@ if (args.includes('--generate')) {
   excelPath = args[1];
 }
 
-console.log('args', args);
-
 // manual config
 try {
   configFile = fs.readFileSync('translations.config.json', 'utf8');
